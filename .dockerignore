@@ -1,0 +1,18 @@
+# Old exported files (not needed - already reorganized into assets/)
+AURASolucionesdeIAparaClnicasdeEsttica_LaionSolutions.html
+54e312a1c_Image-HerolandingAura.jpg
+5a8919ba1_20260130_1001_ImageGeneration_remix_01kg724jq3ek6r4srhazax6f1x.png
+badgejs.descarga
+externaltrackingjs.descarga
+index0qsJof8.css
+indexZ3R6p__8js.descarga
+logo_v3.d98750a7c406dd97e5db.png
+photo1560066984138dadb4c035
+photo162990961365428e377c37b09
+
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore

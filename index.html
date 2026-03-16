@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link href="assets/images/logo.png" rel="icon" type="image/png">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AURA - Soluciones de IA para Clínicas de Estética | Laion Solutions</title>
+  <script crossorigin="" src="assets/js/app.js" type="module">
+  </script>
+  <link crossorigin="" href="assets/css/styles.css" rel="stylesheet">
+  <meta content="Aura IA" property="og:title">
+  <meta
+    content="Aura IA es una plataforma de soluciones de Inteligencia Artificial diseñada para optimizar la gestión y el crecimiento de clínicas de estética, automatizando la captación de leads, la atención al cliente y el agendamiento de citas."
+    property="og:description">
+  <meta content="assets/images/ai-generation.png" property="og:image">
+  <meta content="" property="og:url">
+  <meta content="website" property="og:type">
+  <meta content="Aura IA" property="og:site_name">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="Aura IA" name="twitter:title">
+  <meta
+    content="Aura IA es una plataforma de soluciones de Inteligencia Artificial diseñada para optimizar la gestión y el crecimiento de clínicas de estética, automatizando la captación de leads, la atención al cliente y el agendamiento de citas."
+    name="twitter:description">
+  <meta content="assets/images/ai-generation.png" name="twitter:image">
+  <meta content="" name="twitter:url">
+  <meta
+    content="Aura IA es una plataforma de soluciones de Inteligencia Artificial diseñada para optimizar la gestión y el crecimiento de clínicas de estética, automatizando la captación de leads, la atención al cliente y el agendamiento de citas."
+    name="description">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="Aura IA" name="apple-mobile-web-app-title">
+  <style>
+    @keyframes badge-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .badge-spinner {
+      animation: badge-spin 1s linear infinite;
+    }
+
+    @keyframes base44-fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes base44-scale-in {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  <style type="text/css">
+    [data-sonner-toaster][dir=ltr],
+    html[dir=ltr] {
+      --toast-icon-margin-start: -3px;
+      --toast-icon-margin-end: 4px;
+      --toast-svg-margin-start: -1px;
+      --toast-svg-margin-end: 0px;
+      --toast-button-margin-start: auto;
+      --toast-button-margin-end: 0;
+      --toast-close-button-start: 0;
+      --toast-close-button-end: unset;
+      --toast-close-button-transform: translate(-35%, -35%)
+    }
+
+    [data-sonner-toaster][dir=rtl],
+    html[dir=rtl] {
+      --toast-icon-margin-start: 4px;
+      --toast-icon-margin-end: -3px;
+      --toast-svg-margin-start: 0px;
+      --toast-svg-margin-end: -1px;
+      --toast-button-margin-start: 0;
+      --toast-button-margin-end: auto;
+      --toast-close-button-start: unset;
+      --toast-close-button-end: 0;
+      --toast-close-button-transform: translate(35%, -35%)
+    }
+
+    [data-sonner-toaster] {
+      position: fixed;
+      width: var(--width);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      --gray1: hsl(0, 0%, 99%);
+      --gray2: hsl(0, 0%, 97.3%);
+      --gray3: hsl(0, 0%, 95.1%);
+      --gray4: hsl(0, 0%, 93%);
+      --gray5: hsl(0, 0%, 90.9%);
+      --gray6: hsl(0, 0%, 88.7%);
+      --gray7: hsl(0, 0%, 85.8%);
+      --gray8: hsl(0, 0%, 78%);
+      --gray9: hsl(0, 0%, 56.1%);
+      --gray10: hsl(0, 0%, 52.3%);
+      --gray11: hsl(0, 0%, 43.5%);
+      --gray12: hsl(0, 0%, 9%);
+      --border-radius: 8px;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      outline: 0;
+      z-index: 999999999;
+      transition: transform .4s ease
+    }
+
+    @media (hover:none) and (pointer:coarse) {
+      [data-sonner-toaster][data-lifted=true] {
+        transform: none
+      }
+    }
+
+    [data-sonner-toaster][data-x-position=right] {
+      right: var(--offset-right)
+    }
+
+    [data-sonner-toaster][data-x-position=left] {
+      left: var(--offset-left)
+    }
+
+    [data-sonner-toaster][data-x-position=center] {
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    [data-sonner-toaster][data-y-position=top] {
+      top: var(--offset-top)
+    }
+
+    [data-sonner-toaster][data-y-position=bottom] {
+      bottom: var(--offset-bottom)
+    }
+
+    [data-sonner-toast] {
+      --y: translateY(100%);
+      --lift-amount: calc(var(--lift) * var(--gap));
+      z-index: var(--z-index);
+      position: absolute;
+      opacity: 0;
+      transform: var(--y);
+      touch-action: none;
+      transition: transform .4s, opacity .4s, height .4s, box-shadow .2s;
+      box-sizing: border-box;
+      outline: 0;
+      overflow-wrap: anywhere
+    }
+
+    [data-sonner-toast][data-styled=true] {
+      padding: 16px;
+      background: var(--normal-bg);
+      border: 1px solid var(--normal-border);
+      color: var(--normal-text);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+      width: var(--width);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    [data-sonner-toast]:focus-visible {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .1), 0 0 0 2px rgba(0, 0, 0, .2)
+    }
+
+    [data-sonner-toast][data-y-position=top] {
+      top: 0;
+      --y: translateY(-100%);
+      --lift: 1;
+      --lift-amount: calc(1 * var(--gap))
+    }
+
+    [data-sonner-toast][data-y-position=bottom] {
+      bottom: 0;
+      --y: translateY(100%);
+      --lift: -1;
+      --lift-amount: calc(var(--lift) * var(--gap))
+    }
+
+    [data-sonner-toast][data-styled=true] [data-description] {
+      font-weight: 400;
+      line-height: 1.4;
+      color: #3f3f3f
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-styled=true] [data-description] {
+      color: inherit
+    }
+
+    [data-sonner-toaster][data-sonner-theme=dark] [data-description] {
+      color: #e8e8e8
+    }
+
+    [data-sonner-toast][data-styled=true] [data-title] {
+      font-weight: 500;
+      line-height: 1.5;
+      color: inherit
+    }
+
+    [data-sonner-toast][data-styled=true] [data-icon] {
+      display: flex;
+      height: 16px;
+      width: 16px;
+      position: relative;
+      justify-content: flex-start;
+      align-items: center;
+      flex-shrink: 0;
+      margin-left: var(--toast-icon-margin-start);
+      margin-right: var(--toast-icon-margin-end)
+    }
+
+    [data-sonner-toast][data-promise=true] [data-icon]>svg {
+      opacity: 0;
+      transform: scale(.8);
+      transform-origin: center;
+      animation: sonner-fade-in .3s ease forwards
+    }
+
+    [data-sonner-toast][data-styled=true] [data-icon]>* {
+      flex-shrink: 0
+    }
+
+    [data-sonner-toast][data-styled=true] [data-icon] svg {
+      margin-left: var(--toast-svg-margin-start);
+      margin-right: var(--toast-svg-margin-end)
+    }
+
+    [data-sonner-toast][data-styled=true] [data-content] {
+      display: flex;
+      flex-direction: column;
+      gap: 2px
+    }
+
+    [data-sonner-toast][data-styled=true] [data-button] {
+      border-radius: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      height: 24px;
+      font-size: 12px;
+      color: var(--normal-bg);
+      background: var(--normal-text);
+      margin-left: var(--toast-button-margin-start);
+      margin-right: var(--toast-button-margin-end);
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      outline: 0;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      transition: opacity .4s, box-shadow .2s
+    }
+
+    [data-sonner-toast][data-styled=true] [data-button]:focus-visible {
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, .4)
+    }
+
+    [data-sonner-toast][data-styled=true] [data-button]:first-of-type {
+      margin-left: var(--toast-button-margin-start);
+      margin-right: var(--toast-button-margin-end)
+    }
+
+    [data-sonner-toast][data-styled=true] [data-cancel] {
+      color: var(--normal-text);
+      background: rgba(0, 0, 0, .08)
+    }
+
+    [data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast][data-styled=true] [data-cancel] {
+      background: rgba(255, 255, 255, .3)
+    }
+
+    [data-sonner-toast][data-styled=true] [data-close-button] {
+      position: absolute;
+      left: var(--toast-close-button-start);
+      right: var(--toast-close-button-end);
+      top: 0;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      color: var(--gray12);
+      background: var(--normal-bg);
+      border: 1px solid var(--gray4);
+      transform: var(--toast-close-button-transform);
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
+      transition: opacity .1s, background .2s, border-color .2s
+    }
+
+    [data-sonner-toast][data-styled=true] [data-close-button]:focus-visible {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .1), 0 0 0 2px rgba(0, 0, 0, .2)
+    }
+
+    [data-sonner-toast][data-styled=true] [data-disabled=true] {
+      cursor: not-allowed
+    }
+
+    [data-sonner-toast][data-styled=true]:hover [data-close-button]:hover {
+      background: var(--gray2);
+      border-color: var(--gray5)
+    }
+
+    [data-sonner-toast][data-swiping=true]::before {
+      content: '';
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      height: 100%;
+      z-index: -1
+    }
+
+    [data-sonner-toast][data-y-position=top][data-swiping=true]::before {
+      bottom: 50%;
+      transform: scaleY(3) translateY(50%)
+    }
+
+    [data-sonner-toast][data-y-position=bottom][data-swiping=true]::before {
+      top: 50%;
+      transform: scaleY(3) translateY(-50%)
+    }
+
+    [data-sonner-toast][data-swiping=false][data-removed=true]::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      transform: scaleY(2)
+    }
+
+    [data-sonner-toast][data-expanded=true]::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: calc(var(--gap) + 1px);
+      bottom: 100%;
+      width: 100%
+    }
+
+    [data-sonner-toast][data-mounted=true] {
+      --y: translateY(0);
+      opacity: 1
+    }
+
+    [data-sonner-toast][data-expanded=false][data-front=false] {
+      --scale: var(--toasts-before) * 0.05 + 1;
+      --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));
+      height: var(--front-toast-height)
+    }
+
+    [data-sonner-toast]>* {
+      transition: opacity .4s
+    }
+
+    [data-sonner-toast][data-x-position=right] {
+      right: 0
+    }
+
+    [data-sonner-toast][data-x-position=left] {
+      left: 0
+    }
+
+    [data-sonner-toast][data-expanded=false][data-front=false][data-styled=true]>* {
+      opacity: 0
+    }
+
+    [data-sonner-toast][data-visible=false] {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    [data-sonner-toast][data-mounted=true][data-expanded=true] {
+      --y: translateY(calc(var(--lift) * var(--offset)));
+      height: var(--initial-height)
+    }
+
+    [data-sonner-toast][data-removed=true][data-front=true][data-swipe-out=false] {
+      --y: translateY(calc(var(--lift) * -100%));
+      opacity: 0
+    }
+
+    [data-sonner-toast][data-removed=true][data-front=false][data-swipe-out=false][data-expanded=true] {
+      --y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));
+      opacity: 0
+    }
+
+    [data-sonner-toast][data-removed=true][data-front=false][data-swipe-out=false][data-expanded=false] {
+      --y: translateY(40%);
+      opacity: 0;
+      transition: transform .5s, opacity .2s
+    }
+
+    [data-sonner-toast][data-removed=true][data-front=false]::before {
+      height: calc(var(--initial-height) + 20%)
+    }
+
+    [data-sonner-toast][data-swiping=true] {
+      transform: var(--y) translateY(var(--swipe-amount-y, 0)) translateX(var(--swipe-amount-x, 0));
+      transition: none
+    }
+
+    [data-sonner-toast][data-swiped=true] {
+      user-select: none
+    }
+
+    [data-sonner-toast][data-swipe-out=true][data-y-position=bottom],
+    [data-sonner-toast][data-swipe-out=true][data-y-position=top] {
+      animation-duration: .2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards
+    }
+
+    [data-sonner-toast][data-swipe-out=true][data-swipe-direction=left] {
+      animation-name: swipe-out-left
+    }
+
+    [data-sonner-toast][data-swipe-out=true][data-swipe-direction=right] {
+      animation-name: swipe-out-right
+    }
+
+    [data-sonner-toast][data-swipe-out=true][data-swipe-direction=up] {
+      animation-name: swipe-out-up
+    }
+
+    [data-sonner-toast][data-swipe-out=true][data-swipe-direction=down] {
+      animation-name: swipe-out-down
+    }
+
+    @keyframes swipe-out-left {
+      from {
+        transform: var(--y) translateX(var(--swipe-amount-x));
+        opacity: 1
+      }
+
+      to {
+        transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%));
+        opacity: 0
+      }
+    }
+
+    @keyframes swipe-out-right {
+      from {
+        transform: var(--y) translateX(var(--swipe-amount-x));
+        opacity: 1
+      }
+
+      to {
+        transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%));
+        opacity: 0
+      }
+    }
+
+    @keyframes swipe-out-up {
+      from {
+        transform: var(--y) translateY(var(--swipe-amount-y));
+        opacity: 1
+      }
+
+      to {
+        transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%));
+        opacity: 0
+      }
+    }
+
+    @keyframes swipe-out-down {
+      from {
+        transform: var(--y) translateY(var(--swipe-amount-y));
+        opacity: 1
+      }
+
+      to {
+        transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%));
+        opacity: 0
+      }
+    }
+
+    @media (max-width:600px) {
+      [data-sonner-toaster] {
+        position: fixed;
+        right: var(--mobile-offset-right);
+        left: var(--mobile-offset-left);
+        width: 100%
+      }
+
+      [data-sonner-toaster][dir=rtl] {
+        left: calc(var(--mobile-offset-left) * -1)
+      }
+
+      [data-sonner-toaster] [data-sonner-toast] {
+        left: 0;
+        right: 0;
+        width: calc(100% - var(--mobile-offset-left) * 2)
+      }
+
+      [data-sonner-toaster][data-x-position=left] {
+        left: var(--mobile-offset-left)
+      }
+
+      [data-sonner-toaster][data-y-position=bottom] {
+        bottom: var(--mobile-offset-bottom)
+      }
+
+      [data-sonner-toaster][data-y-position=top] {
+        top: var(--mobile-offset-top)
+      }
+
+      [data-sonner-toaster][data-x-position=center] {
+        left: var(--mobile-offset-left);
+        right: var(--mobile-offset-right);
+        transform: none
+      }
+    }
+
+    [data-sonner-toaster][data-sonner-theme=light] {
+      --normal-bg: #fff;
+      --normal-border: var(--gray4);
+      --normal-text: var(--gray12);
+      --success-bg: hsl(143, 85%, 96%);
+      --success-border: hsl(145, 92%, 87%);
+      --success-text: hsl(140, 100%, 27%);
+      --info-bg: hsl(208, 100%, 97%);
+      --info-border: hsl(221, 91%, 93%);
+      --info-text: hsl(210, 92%, 45%);
+      --warning-bg: hsl(49, 100%, 97%);
+      --warning-border: hsl(49, 91%, 84%);
+      --warning-text: hsl(31, 92%, 45%);
+      --error-bg: hsl(359, 100%, 97%);
+      --error-border: hsl(359, 100%, 94%);
+      --error-text: hsl(360, 100%, 45%)
+    }
+
+    [data-sonner-toaster][data-sonner-theme=light] [data-sonner-toast][data-invert=true] {
+      --normal-bg: #000;
+      --normal-border: hsl(0, 0%, 20%);
+      --normal-text: var(--gray1)
+    }
+
+    [data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast][data-invert=true] {
+      --normal-bg: #fff;
+      --normal-border: var(--gray3);
+      --normal-text: var(--gray12)
+    }
+
+    [data-sonner-toaster][data-sonner-theme=dark] {
+      --normal-bg: #000;
+      --normal-bg-hover: hsl(0, 0%, 12%);
+      --normal-border: hsl(0, 0%, 20%);
+      --normal-border-hover: hsl(0, 0%, 25%);
+      --normal-text: var(--gray1);
+      --success-bg: hsl(150, 100%, 6%);
+      --success-border: hsl(147, 100%, 12%);
+      --success-text: hsl(150, 86%, 65%);
+      --info-bg: hsl(215, 100%, 6%);
+      --info-border: hsl(223, 43%, 17%);
+      --info-text: hsl(216, 87%, 65%);
+      --warning-bg: hsl(64, 100%, 6%);
+      --warning-border: hsl(60, 100%, 9%);
+      --warning-text: hsl(46, 87%, 65%);
+      --error-bg: hsl(358, 76%, 10%);
+      --error-border: hsl(357, 89%, 16%);
+      --error-text: hsl(358, 100%, 81%)
+    }
+
+    [data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast] [data-close-button] {
+      background: var(--normal-bg);
+      border-color: var(--normal-border);
+      color: var(--normal-text)
+    }
+
+    [data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast] [data-close-button]:hover {
+      background: var(--normal-bg-hover);
+      border-color: var(--normal-border-hover)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=success] {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button] {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=info] {
+      background: var(--info-bg);
+      border-color: var(--info-border);
+      color: var(--info-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button] {
+      background: var(--info-bg);
+      border-color: var(--info-border);
+      color: var(--info-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=warning] {
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: var(--warning-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button] {
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: var(--warning-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=error] {
+      background: var(--error-bg);
+      border-color: var(--error-border);
+      color: var(--error-text)
+    }
+
+    [data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button] {
+      background: var(--error-bg);
+      border-color: var(--error-border);
+      color: var(--error-text)
+    }
+
+    .sonner-loading-wrapper {
+      --size: 16px;
+      height: var(--size);
+      width: var(--size);
+      position: absolute;
+      inset: 0;
+      z-index: 10
+    }
+
+    .sonner-loading-wrapper[data-visible=false] {
+      transform-origin: center;
+      animation: sonner-fade-out .2s ease forwards
+    }
+
+    .sonner-spinner {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      height: var(--size);
+      width: var(--size)
+    }
+
+    .sonner-loading-bar {
+      animation: sonner-spin 1.2s linear infinite;
+      background: var(--gray11);
+      border-radius: 6px;
+      height: 8%;
+      left: -10%;
+      position: absolute;
+      top: -3.9%;
+      width: 24%
+    }
+
+    .sonner-loading-bar:first-child {
+      animation-delay: -1.2s;
+      transform: rotate(.0001deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(2) {
+      animation-delay: -1.1s;
+      transform: rotate(30deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(3) {
+      animation-delay: -1s;
+      transform: rotate(60deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(4) {
+      animation-delay: -.9s;
+      transform: rotate(90deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(5) {
+      animation-delay: -.8s;
+      transform: rotate(120deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(6) {
+      animation-delay: -.7s;
+      transform: rotate(150deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(7) {
+      animation-delay: -.6s;
+      transform: rotate(180deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(8) {
+      animation-delay: -.5s;
+      transform: rotate(210deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(9) {
+      animation-delay: -.4s;
+      transform: rotate(240deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(10) {
+      animation-delay: -.3s;
+      transform: rotate(270deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(11) {
+      animation-delay: -.2s;
+      transform: rotate(300deg) translate(146%)
+    }
+
+    .sonner-loading-bar:nth-child(12) {
+      animation-delay: -.1s;
+      transform: rotate(330deg) translate(146%)
+    }
+
+    @keyframes sonner-fade-in {
+      0% {
+        opacity: 0;
+        transform: scale(.8)
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    @keyframes sonner-fade-out {
+      0% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(.8)
+      }
+    }
+
+    @keyframes sonner-spin {
+      0% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: .15
+      }
+    }
+
+    @media (prefers-reduced-motion) {
+
+      .sonner-loading-bar,
+      [data-sonner-toast],
+      [data-sonner-toast]>* {
+        transition: none !important;
+        animation: none !important
+      }
+    }
+
+    .sonner-loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: center;
+      transition: opacity .2s, transform .2s
+    }
+
+    .sonner-loader[data-visible=false] {
+      opacity: 0;
+      transform: scale(.8) translate(-50%, -50%)
+    }
+  </style>
+  <link rel="canonical" href="https://www.laionsolutions.com/" data-react-helmet="true">
+  <meta name="description"
+    content="AURA es un sistema inteligente de IA que automatiza la captación y calificación de pacientes para clínicas de estética. Aumenta conversiones +40%, reduce trabajo manual -30% y capta +50% más pacientes."
+    data-react-helmet="true">
+  <meta name="keywords"
+    content="inteligencia artificial clínicas estética, automatización captación pacientes, IA clínicas belleza, agente IA 24/7, calificación leads estética, automatización citas clínicas, soluciones IA medicina estética"
+    data-react-helmet="true">
+  <meta property="og:type" content="website" data-react-helmet="true">
+  <meta property="og:url" content="https://www.laionsolutions.com/" data-react-helmet="true">
+  <meta property="og:title" content="AURA - Soluciones de IA para Clínicas de Estética" data-react-helmet="true">
+  <meta property="og:description"
+    content="Sistemas Inteligentes que atraen clientes listos para invertir. Automatiza la captación de pacientes con IA."
+    data-react-helmet="true">
+  <meta property="og:image" content="assets/images/hero-landing.jpg" data-react-helmet="true">
+  <meta property="twitter:card" content="summary_large_image" data-react-helmet="true">
+  <meta property="twitter:url" content="https://www.laionsolutions.com/" data-react-helmet="true">
+  <meta property="twitter:title" content="AURA - Soluciones de IA para Clínicas de Estética" data-react-helmet="true">
+  <meta property="twitter:description"
+    content="Sistemas Inteligentes que atraen clientes listos para invertir. Automatiza la captación de pacientes con IA."
+    data-react-helmet="true">
+  <meta property="twitter:image" content="assets/images/hero-landing.jpg" data-react-helmet="true">
+  <meta name="robots" content="index, follow" data-react-helmet="true">
+  <meta name="language" content="Spanish" data-react-helmet="true">
+  <meta name="author" content="Laion Solutions" data-react-helmet="true">
+  <script src="assets/js/external-tracking.js" data-tracking-id="tk_1b436b0117cf44a882cc607815b330cc" async=""></script>
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen relative">
+      <div class="fixed inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-stone-100 via-stone-50 to-amber-50/30"></div>
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url(&quot;data:image/svg+xml,%3Csvg width=&#39;100&#39; height=&#39;100&#39; viewBox=&#39;0 0 100 100&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E%3Cfilter id=&#39;noiseFilter&#39;%3E%3CfeTurbulence type=&#39;fractalNoise&#39; baseFrequency=&#39;0.9&#39; numOctaves=&#39;4&#39; stitchTiles=&#39;stitch&#39;/%3E%3C/filter%3E%3Crect width=&#39;100%25&#39; height=&#39;100%25&#39; filter=&#39;url(%23noiseFilter)&#39; opacity=&#39;0.15&#39;/%3E%3C/svg%3E&quot;); background-size: 100px 100px;">
+        </div>
+      </div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 z-50"><img src="assets/images/ai-generation.png"
+          alt="Aura by LAION" class="h-64 md:h-80" style="transform: scale(0.85);"></div>
+      <div class="relative z-10">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden"
+          style="padding-top: 5cm;">
+          <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-amber-300/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl"></div>
+          </div>
+          <div class="relative z-10 py-20">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+              <p class="text-xl md:text-2xl text-stone-800 max-w-3xl mx-auto mb-10 leading-relaxed font-medium"
+                style="opacity: 1; transform: none;">Sistemas Inteligentes que atraen clientes listos para invertir</p>
+              <div class="mb-10 max-w-3xl mx-auto" style="opacity: 1; transform: none;"><img
+                  src="assets/images/hero-landing.jpg" alt="AURA en acción"
+                  class="w-full h-auto rounded-2xl shadow-2xl shadow-amber-500/20"></div>
+              <div style="opacity: 1; transform: none;"><button
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary hover:bg-primary/90 h-10 text-white px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
+                  style="background-color: rgb(235, 204, 117); box-shadow: rgba(235, 204, 117, 0.25) 0px 4px 6px;">Solicitar
+                  Demo<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-right ml-2 w-5 h-5">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg></button></div>
+              <div class="mt-20 grid grid-cols-3 gap-8 max-w-3xl mx-auto" style="opacity: 1; transform: none;">
+                <div class="text-center">
+                  <div class="text-3xl md:text-4xl font-semibold" style="color: rgb(235, 204, 117);">+40%</div>
+                  <div class="text-sm text-stone-600 mt-1 font-medium">Conversión de Leads</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl md:text-4xl font-semibold" style="color: rgb(235, 204, 117);">-30%</div>
+                  <div class="text-sm text-stone-600 mt-1 font-medium">Trabajo Manual</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl md:text-4xl font-semibold" style="color: rgb(235, 204, 117);">+50%</div>
+                  <div class="text-sm text-stone-600 mt-1 font-medium">Captación de Pacientes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-8 relative">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+              <div class="group" style="opacity: 0; transform: translateY(20px);">
+                <div
+                  class="bg-white/70 backdrop-blur-md p-8 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 h-full">
+                  <div class="flex items-start gap-5">
+                    <div
+                      class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl flex items-center justify-center transition-all duration-300"
+                      style="--hover-bg: rgba(235, 204, 117, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-message-square-off w-7 h-7 text-stone-400 transition-colors"
+                        style="--hover-color: #EBCC75;">
+                        <path d="M21 15V5a2 2 0 0 0-2-2H9"></path>
+                        <path d="m2 2 20 20"></path>
+                        <path d="M3.6 3.6c-.4.3-.6.8-.6 1.4v16l4-4h10"></path>
+                      </svg></div>
+                    <div>
+                      <h3 class="text-xl font-bold text-stone-800 mb-2">WhatsApp</h3>
+                      <p class="text-stone-700 leading-relaxed">Saturado con cantidad de mensajes y consultas
+                        constantes, sin capacidad de atenderlo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group" style="opacity: 0; transform: translateY(20px);">
+                <div
+                  class="bg-white/70 backdrop-blur-md p-8 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 h-full">
+                  <div class="flex items-start gap-5">
+                    <div
+                      class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl flex items-center justify-center transition-all duration-300"
+                      style="--hover-bg: rgba(235, 204, 117, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar-x w-7 h-7 text-stone-400 transition-colors"
+                        style="--hover-color: #EBCC75;">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                        <path d="m14 14-4 4"></path>
+                        <path d="m10 14 4 4"></path>
+                      </svg></div>
+                    <div>
+                      <h3 class="text-xl font-bold text-stone-800 mb-2">Pacientes</h3>
+                      <p class="text-stone-700 leading-relaxed">Altos índices de cancelaciones y no-shows que afectan tu
+                        agenda e ingresos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group" style="opacity: 0; transform: translateY(20px);">
+                <div
+                  class="bg-white/70 backdrop-blur-md p-8 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 h-full">
+                  <div class="flex items-start gap-5">
+                    <div
+                      class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl flex items-center justify-center transition-all duration-300"
+                      style="--hover-bg: rgba(235, 204, 117, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-clock w-7 h-7 text-stone-400 transition-colors"
+                        style="--hover-color: #EBCC75;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg></div>
+                    <div>
+                      <h3 class="text-xl font-bold text-stone-800 mb-2">Agenda</h3>
+                      <p class="text-stone-700 leading-relaxed">Espacios vacíos en tu agenda por falta de seguimiento
+                        efectivo y gestión manual.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group" style="opacity: 0; transform: translateY(20px);">
+                <div
+                  class="bg-white/70 backdrop-blur-md p-8 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 h-full">
+                  <div class="flex items-start gap-5">
+                    <div
+                      class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-stone-100 to-stone-50 rounded-xl flex items-center justify-center transition-all duration-300"
+                      style="--hover-bg: rgba(235, 204, 117, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-trending-down w-7 h-7 text-stone-400 transition-colors"
+                        style="--hover-color: #EBCC75;">
+                        <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                        <polyline points="16 17 22 17 22 11"></polyline>
+                      </svg></div>
+                    <div>
+                      <h3 class="text-xl font-bold text-stone-800 mb-2">Ingresos</h3>
+                      <p class="text-stone-700 leading-relaxed">Frustración del equipo por procesos manuales que generan
+                        pérdidas económicas constantes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-10"><img src="assets/images/clinic-treatment.jpg" alt=""
+              class="w-full h-full object-cover"></div>
+          <div class="relative max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" style="opacity: 0; transform: translateY(20px);">
+              <p class="text-xl md:text-2xl text-stone-700 max-w-3xl mx-auto leading-relaxed font-medium">Agentes de IA
+                que transforman interés en pacientes reales, elevando la eficiencia de tu clínica</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="group" style="opacity: 0; transform: translateY(30px);">
+                <div
+                  class="relative bg-white/70 backdrop-blur-md p-8 rounded-3xl border-2 border-amber-400/40 hover:border-amber-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/20 h-full overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-100/0 group-hover:from-amber-100/40 group-hover:to-amber-200/30 transition-all duration-500 rounded-3xl">
+                  </div>
+                  <div class="relative z-10">
+                    <div class="flex items-start justify-between mb-6">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-message-circle w-8 h-8 text-white">
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right w-6 h-6 text-stone-300 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-800 mb-3">AURA by LAION</h3>
+                    <p class="text-stone-700 leading-relaxed mb-6">Agente IA entrenado específicamente para clínicas
+                      estéticas que funciona 24/7 manteniendo siempre el profesionalismo.</p>
+                    <div class="pt-6 border-t border-stone-100">
+                      <div class="flex items-baseline gap-2"><span
+                          class="text-4xl font-bold bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent">24/7</span><span
+                          class="text-stone-600 font-medium">Disponibilidad</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group" style="opacity: 0; transform: translateY(30px);">
+                <div
+                  class="relative bg-white/70 backdrop-blur-md p-8 rounded-3xl border-2 border-amber-400/40 hover:border-amber-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/20 h-full overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-100/0 group-hover:from-amber-100/40 group-hover:to-amber-200/30 transition-all duration-500 rounded-3xl">
+                  </div>
+                  <div class="relative z-10">
+                    <div class="flex items-start justify-between mb-6">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-target w-8 h-8 text-white">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <circle cx="12" cy="12" r="6"></circle>
+                          <circle cx="12" cy="12" r="2"></circle>
+                        </svg></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right w-6 h-6 text-stone-300 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-800 mb-3">Cualifica Clientes</h3>
+                    <p class="text-stone-700 leading-relaxed mb-6">Identifica y filtra a los pacientes realmente
+                      interesados y con capacidad de compra, optimizando tu tiempo y recursos.</p>
+                    <div class="pt-6 border-t border-stone-100">
+                      <div class="flex items-baseline gap-2"><span
+                          class="text-4xl font-bold bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent">+40%</span><span
+                          class="text-stone-600 font-medium">Leads Calificados</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group" style="opacity: 0; transform: translateY(30px);">
+                <div
+                  class="relative bg-white/70 backdrop-blur-md p-8 rounded-3xl border-2 border-amber-400/40 hover:border-amber-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/20 h-full overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-100/0 group-hover:from-amber-100/40 group-hover:to-amber-200/30 transition-all duration-500 rounded-3xl">
+                  </div>
+                  <div class="relative z-10">
+                    <div class="flex items-start justify-between mb-6">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-calendar w-8 h-8 text-white">
+                          <path d="M8 2v4"></path>
+                          <path d="M16 2v4"></path>
+                          <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                          <path d="M3 10h18"></path>
+                        </svg></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right w-6 h-6 text-stone-300 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-800 mb-3">Agenda Pacientes Reales</h3>
+                    <p class="text-stone-700 leading-relaxed mb-6">Agenda únicamente y de forma automática los clientes
+                      informados y listos para hacerse el tratamiento.</p>
+                    <div class="pt-6 border-t border-stone-100">
+                      <div class="flex items-baseline gap-2"><span
+                          class="text-4xl font-bold bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent">100%</span><span
+                          class="text-stone-600 font-medium">Agenda Optimizada</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group" style="opacity: 0; transform: translateY(30px);">
+                <div
+                  class="relative bg-white/70 backdrop-blur-md p-8 rounded-3xl border-2 border-amber-400/40 hover:border-amber-400/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/20 h-full overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-100/0 group-hover:from-amber-100/40 group-hover:to-amber-200/30 transition-all duration-500 rounded-3xl">
+                  </div>
+                  <div class="relative z-10">
+                    <div class="flex items-start justify-between mb-6">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-file-text w-8 h-8 text-white">
+                          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                          <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                          <path d="M10 9H8"></path>
+                          <path d="M16 13H8"></path>
+                          <path d="M16 17H8"></path>
+                        </svg></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right w-6 h-6 text-stone-300 group-hover:text-amber-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-800 mb-3">Responde Dudas</h3>
+                    <p class="text-stone-700 leading-relaxed mb-6">Atiende consultas comunes sobre tratamientos, precios
+                      y servicios de forma instantánea y profesional.</p>
+                    <div class="pt-6 border-t border-stone-100">
+                      <div class="flex items-baseline gap-2"><span
+                          class="text-4xl font-bold bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent">0´</span><span
+                          class="text-stone-600 font-medium">Tiempo de Respuesta</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-16 relative overflow-hidden">
+          <div class="absolute inset-0">
+            <div class="absolute top-20 right-20 w-72 h-72 bg-amber-300/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-96 h-96 bg-amber-200/15 rounded-full blur-3xl"></div>
+          </div>
+          <div class="relative max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12" style="opacity: 0; transform: translateY(20px);">
+              <h2 class="text-3xl md:text-4xl font-bold text-stone-800">Qué lograrás</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div
+                class="bg-white/70 backdrop-blur-md p-6 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-lg"
+                style="opacity: 0; transform: translateY(20px);">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                  style="background-color: rgb(235, 204, 117);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-6 h-6 text-white">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline>
+                  </svg></div>
+                <h3 class="text-lg font-bold text-stone-950 mb-2">Mayor Eficiencia y Control</h3>
+                <p class="text-stone-700 leading-relaxed">Optimiza recursos y mantén el control total de tus procesos de
+                  captación.</p>
+              </div>
+              <div
+                class="bg-white/70 backdrop-blur-md p-6 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-lg"
+                style="opacity: 0; transform: translateY(20px);">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                  style="background-color: rgb(235, 204, 117);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-white">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg></div>
+                <h3 class="text-lg font-bold text-stone-950 mb-2">Menos Esfuerzo Humano</h3>
+                <p class="text-stone-700 leading-relaxed">Libera a tu equipo de tareas repetitivas para que se enfoquen
+                  en lo importante.</p>
+              </div>
+              <div
+                class="bg-white/70 backdrop-blur-md p-6 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-lg"
+                style="opacity: 0; transform: translateY(20px);">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                  style="background-color: rgb(235, 204, 117);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-6 h-6 text-white">
+                    <path
+                      d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                    </path>
+                    <path d="M20 3v4"></path>
+                    <path d="M22 5h-4"></path>
+                    <path d="M4 17v2"></path>
+                    <path d="M5 18H3"></path>
+                  </svg></div>
+                <h3 class="text-lg font-bold text-stone-950 mb-2">Experiencia Premium</h3>
+                <p class="text-stone-700 leading-relaxed">Brinda una atención profesional y de calidad desde el primer
+                  contacto con el paciente.</p>
+              </div>
+              <div
+                class="bg-white/70 backdrop-blur-md p-6 rounded-2xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 hover:shadow-lg"
+                style="opacity: 0; transform: translateY(20px);">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                  style="background-color: rgb(235, 204, 117);"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-6 h-6 text-white">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg></div>
+                <h3 class="text-lg font-bold text-stone-950 mb-2">Crecimiento Escalable</h3>
+                <p class="text-stone-700 leading-relaxed">Crece tu clínica sin estrés ni necesidad de contratar más
+                  personal.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contacto" class="py-16 relative overflow-hidden">
+          <div class="absolute inset-0"><img src="assets/images/clinic-interior.jpg" alt=""
+              class="w-full h-full object-cover opacity-10">
+            <div class="absolute bottom-20 left-10 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-20 right-10 w-80 h-80 bg-amber-200/30 rounded-full blur-3xl"></div>
+          </div>
+          <div class="relative max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+              <div style="opacity: 0; transform: translateX(-30px);"><span
+                  class="font-semibold text-sm tracking-wider uppercase" style="color: rgb(235, 204, 117);">Agenda Tu
+                  Demo</span>
+                <h2 class="text-3xl md:text-4xl font-normal text-stone-800 mt-4 mb-6">Escala tu clínica a la vez que
+                  proporcionas una <span class="font-bold">experiencia premium</span> a tus pacientes.</h2>
+                <p class="text-stone-700 leading-relaxed mb-8">Agenda ya tu demo con AURA by LAION y descubre cómo te
+                  ayudamos a conseguirlo.</p>
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check-big w-4 h-4 text-amber-600">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg></div><span class="text-stone-800">Demo personalizada de AURA en acción</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check-big w-4 h-4 text-amber-600">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg></div><span class="text-stone-800">Análisis de cómo optimizar tu clínica</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check-big w-4 h-4 text-amber-600">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg></div><span class="text-stone-800">Sin compromiso ni costos ocultos</span>
+                  </div>
+                </div>
+              </div>
+              <div style="opacity: 0; transform: translateX(30px);">
+                <div
+                  class="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-2xl shadow-amber-500/15 border-2 border-amber-400/40">
+                  <div class="flex items-center gap-2 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                      height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-5 h-5"
+                      style="color: rgb(235, 204, 117);">
+                      <path
+                        d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                      </path>
+                      <path d="M20 3v4"></path>
+                      <path d="M22 5h-4"></path>
+                      <path d="M4 17v2"></path>
+                      <path d="M5 18H3"></path>
+                    </svg><span class="text-sm font-semibold" style="color: rgb(235, 204, 117);">Demo Gratuita con
+                      AURA</span></div>
+                  <form class="space-y-5">
+                    <div><label
+                        class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-stone-800 font-semibold text-sm"
+                        for="nombre">Nombre completo</label><input type="text"
+                        class="flex w-full border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 h-12 border-stone-200 focus:border-amber-400 focus:ring-amber-400/20 rounded-xl"
+                        id="nombre" name="nombre" required="" placeholder="Tu nombre" value=""></div>
+                    <div><label
+                        class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-stone-800 font-semibold text-sm"
+                        for="telefono">Teléfono</label><input type="tel"
+                        class="flex w-full border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 h-12 border-stone-200 focus:border-amber-400 focus:ring-amber-400/20 rounded-xl"
+                        id="telefono" name="telefono" required="" placeholder="+34 600 000 000" value=""></div>
+                    <div><label
+                        class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-stone-800 font-semibold text-sm"
+                        for="email">Email</label><input type="email"
+                        class="flex w-full border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 h-12 border-stone-200 focus:border-amber-400 focus:ring-amber-400/20 rounded-xl"
+                        id="email" name="email" required="" placeholder="tu@email.com" value=""></div>
+                    <div><label
+                        class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-stone-800 font-semibold text-sm"
+                        for="nombre_negocio">Nombre de tu clínica</label><input type="text"
+                        class="flex w-full border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 h-12 border-stone-200 focus:border-amber-400 focus:ring-amber-400/20 rounded-xl"
+                        id="nombre_negocio" name="nombre_negocio" required="" placeholder="Clínica Ejemplo" value="">
+                    </div><button
+                      class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary hover:bg-primary/90 px-4 py-2 w-full h-14 text-white text-lg rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl"
+                      type="submit"
+                      style="background-color: rgb(235, 204, 117); box-shadow: rgba(235, 204, 117, 0.25) 0px 4px 6px;">Solicitar
+                      Demo<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-right ml-2 w-5 h-5">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="relative py-12 bg-white/60 backdrop-blur-md border-t-2 border-amber-400/30">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div class="flex items-center gap-4"><img src="assets/images/ai-generation.png" alt="Aura by LAION"
+                  class="h-12"></div>
+              <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6"><a
+                  class="text-stone-600 hover:text-amber-600 text-sm font-medium transition-colors"
+                  href="#aviso-legal">Aviso Legal</a><a
+                  class="text-stone-600 hover:text-amber-600 text-sm font-medium transition-colors"
+                  href="#terminos">Términos y Servicios</a><a
+                  class="text-stone-600 hover:text-amber-600 text-sm font-medium transition-colors"
+                  href="#privacidad">Política de Privacidad</a><a
+                  class="text-stone-600 hover:text-amber-600 text-sm font-medium transition-colors"
+                  href="#cookies">Política de Cookies</a>
+                <div class="text-stone-700 text-sm font-medium">© 2026 Aura by LAION. Todos los derechos reservados.
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div
+      class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+      <div
+        class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
